@@ -227,7 +227,6 @@ func analyzeTopFiveLogMessages(logAnalyses []LogAnalysis) (topFiveLogMessages []
 	for index := 0; index < maxMessages; index++ {
 		topFiveLogMessages = append(topFiveLogMessages, messages[index])
 	}
-	fmt.Println(topFiveLogMessages)
 	return	
 }
 
