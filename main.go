@@ -47,6 +47,9 @@ func parseLogMessage(logRow string) (LogMessage, error) {
 	}
 	logMessage.timestamp = strings.TrimSpace(leftParts[0])
 	logMessage.severity = strings.TrimSpace(leftParts[1])
+	if logMessage.severity == "" {
+		return logMessage, errors.New("Malformed message")
+	}
 	rightParts := strings.Split(leftParts[2], ":")
 	if len(rightParts) < 3 {
 		return logMessage, errors.New("Malformed message")
