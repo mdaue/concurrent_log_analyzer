@@ -158,9 +158,6 @@ func getEndTime(logMessages []LogMessage) (endTime time.Time) {
 	}
 	endTime, err := time.Parse(layout, logMessages[len(logMessages) - 1].timestamp)
 	if err != nil {
-		fmt.Println(logMessages[len(logMessages) - 1])
-		fmt.Println(err)
-		fmt.Println(logMessages[len(logMessages) - 1].timestamp)
 		panic("Unable to parse end time")
 	}
 	return
