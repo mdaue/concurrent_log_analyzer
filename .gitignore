@@ -1,0 +1,4 @@
+logs
+rapta-supercoach_2024-09-20.log rapta-supercoach_2024-09-20.nocolor.log
+concurrent_log_analyzer
+*.log
